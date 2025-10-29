@@ -13,8 +13,6 @@ class GTZANClassifier(nn.Module):
          nn.ReLU(),
          nn.Conv2d(64, 64, kernel_size=3, padding=1),
          nn.ReLU(),
-         nn.Conv2d(64, 64, kernel_size=3, padding=1),
-         nn.ReLU(),
          nn.Conv2d(64, 16, kernel_size=3, padding=1),
          nn.ReLU(),
          nn.MaxPool2d(4),
@@ -22,7 +20,7 @@ class GTZANClassifier(nn.Module):
 
         self.classifier = nn.Sequential(
             nn.Flatten(),
-            nn.Linear(16 * 4 * 4 * 1654, 128),
+            nn.Linear(16 * 4 * 4 * 827, 128),
             nn.ReLU(),
             nn.Dropout(0.3),
             nn.Linear(128, 10),
@@ -47,6 +45,8 @@ if __name__ == "__main__":
 
     X = GTZANWaveDataset("GTZAN/genres_original")
     X_train, X_test = torch.utils.data.random_split(X, [0.8, 0.2])
+    X_train = torch.utils.data.Subset(X_train, range(100))
+    X_test = torch.utils.data.Subset(X_test, range(25))
 
     train_dataloader = torch.utils.data.DataLoader(
         X_train,

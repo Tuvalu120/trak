@@ -62,6 +62,6 @@ class GTZANWaveDataset(Dataset):
         label = torch.tensor(self._genre_to_idx[label])
         label = torch.nn.functional.one_hot(label, 10).to(torch.float32)
         waveform, sample_rate = torchaudio.load(path)
-        mel_spectogram = torchaudio.transforms.MelSpectrogram(sample_rate, n_fft=1024)(waveform)
+        mel_spectogram = torchaudio.transforms.MelSpectrogram(sample_rate, n_fft=512, n_mels=64, hop_length=256)(waveform)
         mel_spectogram = F.pad(mel_spectogram, (TARGET_LEN - mel_spectogram.size(2), 0))
         return mel_spectogram, label
