@@ -1,3 +1,7 @@
+# Misc
+CIFAR100
+GTZAN
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

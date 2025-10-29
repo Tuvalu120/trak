@@ -6,7 +6,7 @@ import logging
 
 from trak import TRAKer
 
-from datasets import load_dataset
+from gtzan.gtzan_datasets import load_dataset
 from transformers import (
     AutoConfig,
     AutoModelForSequenceClassification,

@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
-from datasets import GTZANWaveDataset
+from gtzan.gtzan_datasets import GTZANWaveDataset
 
 class GTZANClassifier(nn.Module):
     def __init__(self):
