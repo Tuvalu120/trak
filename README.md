@@ -1,3 +1,5 @@
+### **Prototyp WIMU-SIWY**. W repozytorium znajduje się notatnik *wimu-siwy-prototyp.ipynb* zawierający prototyp z wykorzystaniem TRAKa.
+
 [![arXiv](https://img.shields.io/badge/arXiv-2303.14186-b31b1b.svg?style=flat-square)](https://arxiv.org/abs/2303.14186)
 [![PyPI version](https://badge.fury.io/py/traker.svg)](https://badge.fury.io/py/traker)
 [![Documentation Status](https://readthedocs.org/projects/trak/badge/?version=latest)](https://trak.readthedocs.io/en/latest/?badge=latest)
